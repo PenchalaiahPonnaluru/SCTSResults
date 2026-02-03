@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Chaitanya PU College | Results</title>
+    <style>
+        :root {
+            --sc-red: #ed1c24;
+            --sc-blue: #002e5b;
+            --light-gray: #f8f9fa;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #e9ecef;
+            min-height: 100vh;
+            padding-top: 140px;
+        }
+        /* printcss */
+
+/* Compact styles for single page print */
+.result-card {
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+/* Print Header - Compact */
+.print-header {
+    display: none;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 3px solid var(--sc-red);
+    margin-bottom: 15px;
+}
+
+.print-logo {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.print-info h1 {
+    color: var(--sc-red);
+    font-size: 22px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.print-info p {
+    color: #666;
+    font-size: 13px;
+    margin: 5px 0 0 0;
+}
+/* Remove yellow and grey sections from main page */
+.container-header {
+    background: var(--sc-blue);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container-header h2 { 
+    margin: 0; 
+    font-size: 22px; 
+    letter-spacing: 1px;
+}
+
+/* Remove the yellow college-type div */
+.college-type {
+    display: none;
+}
+
+/* Print Header - Simplified, no exam name */
+.print-header {
+    display: none;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 3px solid var(--sc-red);
+    margin-bottom: 15px;
+}
+
+.print-logo {
+    height: 70px;
+    margin-bottom: 8px;
+}
+
+.print-school-name {
+    color: var(--sc-red);
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.print-location {
+    color: #666;
+    font-size: 13px;
+    margin-top: 5px;
+}
+/* Table column alignment */
+.marks-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.marks-table th,
+.marks-table td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.col-subject {
+    width: 45%;
+    text-align: left;
+}
+
+.col-marks,
+.col-max,
+.col-status {
+    width: 18.33%;
+    text-align: center;
+}
+
+.marks-cell,
+.max-marks-cell,
+.status-cell {
+    text-align: center;
+    font-weight: 600;
+}
+
+.max-marks-cell {
+    color: #666;
+    font-weight: 500;
+}
+
+.subject-name {
+    font-weight: 600;
+    color: var(--sc-blue);
+    text-align: left;
+}
+
+.status-pass {
+    color: #28a745;
+    font-weight: 700;
+}
+
+.status-fail {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+.total-row {
+    background: var(--sc-red) !important;
+    color: white !important;
+}
+
+.total-row td {
+    font-weight: 700;
+    border-bottom: none;
+}
+
+/* Print Header with exam name */
+.print-header {
+    display: none;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 3px solid var(--sc-red);
+    margin-bottom: 15px;
+}
+
+.print-logo {
+    height: 70px;
+    margin-bottom: 8px;
+}
+
+.print-school-name {
+    color: var(--sc-red);
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.print-location {
+    color: #666;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.print-exam-name {
+    color: var(--sc-blue);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Print styles */
+@media print {
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+    
+    body {
+        padding-top: 0;
+        background: white;
+    }
+    
+    header, .action-buttons, .footer {
+        display: none !important;
+    }
+    
+    .container-header {
+        display: none !important;
+    }
+    
+    main {
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .page-container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    .print-header {
+        display: block !important;
+    }
+    
+    .result-card {
+        border: 2px solid #000;
+        box-shadow: none;
+        margin-top: 0;
+    }
+    
+    .result-header {
+        background: var(--sc-blue) !important;
+        color: white !important;
+        padding: 10px !important;
+    }
+    
+    .result-header h3 {
+        font-size: 14px !important;
+        margin: 0;
+    }
+    
+    .marks-table th,
+    .marks-table td {
+        font-size: 12px;
+        padding: 8px 6px;
+    }
+}
+/* Print styles */
+@media print {
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+    
+    body {
+        padding-top: 0;
+        background: white;
+    }
+    
+    header, .action-buttons, .footer {
+        display: none !important;
+    }
+    
+    /* Hide the blue exam results header on print */
+    .container-header {
+        display: none !important;
+    }
+    
+    main {
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .page-container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    .print-header {
+        display: block !important;
+    }
+    
+    .result-card {
+        border: 2px solid #000;
+        box-shadow: none;
+        margin-top: 0;
+    }
+    
+    .result-header {
+        background: var(--sc-blue) !important;
+        color: white !important;
+        padding: 10px !important;
+    }
+    
+    .result-header h3 {
+        font-size: 14px !important;
+        margin: 0;
+    }
+}
+/* Compact Student Details */
+.student-details.compact {
+    padding: 15px 20px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 14px;
+}
+
+/* Compact Marks Section */
+.marks-section.compact {
+    padding: 15px 20px;
+}
+
+.marks-table.compact-table {
+    font-size: 14px;
+}
+
+.marks-table.compact-table th,
+.marks-table.compact-table td {
+    padding: 10px 8px;
+}
+
+.marks-table.compact-table th {
+    font-size: 12px;
+}
+
+.subject-name {
+    font-weight: 600;
+    color: var(--sc-blue);
+}
+
+.marks {
+    text-align: center;
+    font-weight: 600;
+}
+
+.max-marks {
+    color: #666;
+    font-weight: 500;
+}
+
+.status-pass {
+    color: #28a745;
+    font-weight: 700;
+}
+
+.status-fail {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+.total-row {
+    background: var(--sc-red) !important;
+    color: white !important;
+}
+
+.total-row td {
+    font-weight: 700;
+}
+
+/* Result Footer */
+.result-footer {
+    text-align: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-top: 2px solid #e0e0e0;
+    margin-top: 15px;
+}
+
+.percentage-display {
+    margin-bottom: 10px;
+}
+
+.percentage-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--sc-red);
+    margin-right: 15px;
+}
+
+.grade-badge {
+    background: var(--sc-blue);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.status-message {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.pass-msg {
+    background: #d4edda;
+    color: #155724;
+}
+
+.fail-msg {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Print Styles - Single Page */
+@media print {
+    @page {
+        size: A4;
+        margin: 10mm;
+    }
+    
+    body {
+        padding-top: 0;
+        background: white;
+    }
+    
+    header, .action-buttons, .footer {
+        display: none !important;
+    }
+    
+    main {
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .page-container {
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    .print-header {
+        display: block !important;
+    }
+    
+    .result-card {
+        border: 2px solid #000;
+        box-shadow: none;
+        margin-top: 0;
+        page-break-inside: avoid;
+    }
+    
+    .result-header {
+        background: var(--sc-blue) !important;
+        color: white !important;
+        padding: 12px !important;
+    }
+    
+    .result-header h3 {
+        font-size: 16px !important;
+    }
+    
+    .student-details,
+    .marks-section {
+        padding: 12px 15px !important;
+    }
+    
+    .marks-table {
+        font-size: 12px !important;
+    }
+    
+    .marks-table th,
+    .marks-table td {
+        padding: 8px 6px !important;
+    }
+    
+    .result-footer {
+        padding: 12px !important;
+    }
+    
+    .percentage-value {
+        font-size: 24px !important;
+    }
+}
+        /* Status styles */
+.status-pass {
+    color: #28a745;
+    font-weight: 700;
+}
+
+.status-fail {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+.status-pass-bg {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.status-fail-bg {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Print Header - Hidden by default, shown when printing */
+.print-header {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid var(--sc-red);
+    margin-bottom: 20px;
+}
+
+.print-logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.print-logo {
+    height: 80px;
+    width: auto;
+}
+
+.print-college-info h1 {
+    color: var(--sc-red);
+    font-size: 28px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.print-college-info h2 {
+    color: var(--sc-blue);
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.print-college-info p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+.print-exam-name {
+    background: var(--sc-blue);
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Print styles */
+@media print {
+    .print-header {
+        display: block !important;
+    }
+    
+    .result-card {
+        border: none;
+        box-shadow: none;
+    }
+    
+    .result-header {
+        display: none; /* Hide original header, show print header instead */
+    }
+    
+    .action-buttons {
+        display: none !important;
+    }
+}
+
+        /* Static/Sticky Header - Centered */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 4px solid var(--sc-red);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .logo-img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .college-info h1 { 
+            color: var(--sc-red); 
+            margin: 0; 
+            font-size: 28px; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
+        }
+
+        .college-info h2 {
+            color: var(--sc-blue);
+            margin: 5px 0 0 0;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .college-info p { 
+            color: #666; 
+            margin: 5px 0 0 0; 
+            font-size: 14px; 
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        main {
+            padding: 30px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        .container-header {
+            background: var(--sc-blue);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .container-header h2 { 
+            margin: 0; 
+            font-size: 24px; 
+            letter-spacing: 1px;
+        }
+
+        .college-type {
+            margin-top: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #ffd700;
+            letter-spacing: 1px;
+        }
+
+        .content-wrapper { padding: 30px; }
+
+        .exam-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .exam-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            background: var(--light-gray);
+            border-left: 5px solid var(--sc-red);
+            border-radius: 10px;
+            color: #333;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #ddd;
+        }
+
+        .exam-link:hover {
+            background: white;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .exam-tag {
+            font-size: 11px;
+            background: var(--sc-red);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+
+        .back-btn {
+            background: transparent;
+            border: 2px solid var(--sc-blue);
+            color: var(--sc-blue);
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 25px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            background: var(--sc-blue);
+            color: white;
+        }
+
+        .input-section {
+            background: var(--light-gray);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .omr-input {
+            flex: 1;
+            padding: 14px 18px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .omr-input:focus {
+            outline: none;
+            border-color: var(--sc-red);
+        }
+
+        .search-btn {
+            padding: 14px 28px;
+            background: var(--sc-red);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .search-btn:hover {
+            background: #c41820;
+        }
+
+        .error-msg {
+            color: var(--sc-red);
+            font-size: 14px;
+            margin-top: 15px;
+            padding: 12px;
+            background: #ffe6e6;
+            border-radius: 6px;
+            border-left: 4px solid var(--sc-red);
+            display: none;
+        }
+
+        .result-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 25px;
+        }
+
+        .result-header {
+            background: var(--sc-blue);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .result-header h3 { margin: 0; font-size: 20px; }
+
+        .student-details {
+            padding: 25px;
+            background: #f8f9fa;
+            border-bottom: 2px solid var(--sc-red);
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--sc-blue);
+        }
+
+        .marks-section { padding: 25px; }
+
+        .marks-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .marks-table th {
+            background: var(--sc-blue);
+            color: white;
+            padding: 14px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .marks-table td {
+            padding: 14px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 15px;
+        }
+
+        .subject-name {
+            font-weight: 600;
+            color: var(--sc-blue);
+        }
+
+        .marks {
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .total-row {
+            background: var(--sc-red) !important;
+            color: white !important;
+        }
+
+        .total-row td {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .percentage-section {
+            background: var(--light-gray);
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .percentage-label {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .percentage-value {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--sc-red);
+        }
+
+        .grade-badge {
+            display: inline-block;
+            background: var(--sc-blue);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            padding: 20px 25px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .btn-save {
+            background: var(--sc-blue);
+            color: white;
+        }
+
+        .btn-print {
+            background: var(--sc-red);
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #888;
+            border-top: 1px solid #eee;
+            background: #f8f9fa;
+        }
+
+        .page { display: none; }
+        .page.active { display: block; }
+
+        @media print {
+            body { 
+                background: white; 
+                padding-top: 0;
+            }
+            header { 
+                position: static; 
+                display: none !important;
+            }
+            .back-btn, .input-section, .action-buttons, .footer { 
+                display: none !important; 
+            }
+            .result-card { 
+                box-shadow: none; 
+                border: 2px solid #000; 
+            }
+            main { 
+                padding: 0; 
+                max-width: 100%; 
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding-top: 120px;
+            }
+            .logo-img {
+                height: 50px;
+            }
+            .college-info h1 {
+                font-size: 20px;
+            }
+            .college-info h2 {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="./assets/schoollogo.jfif" alt="Sri Chaitanya Logo" class="logo-img">
+            <div class="college-info">
+                <h1>Sri Chaitanya</h1>
+                <h2>PU & CBSE College (+2)</h2>
+                <p>Marathahalli, Bengaluru</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-container">
+            
+            <!-- HOME PAGE -->
+            <div id="home-page" class="page active">
+                <div class="container-header">
+                    <h2>EXAMINATION RESULTS</h2>
+                    <!-- <div class="college-type">PU & CBSE College (+2)</div> -->
+                </div>
+                <div class="content-wrapper">
+                    <div class="exam-list">
+                        <div class="exam-link" onclick="loadExam('preboard3')">
+                            <span>Pre-Board 3 <span class="exam-tag">Comming soon</span></span>
+                            <span>→</span>
+                        </div>
+                        <div class="exam-link" onclick="loadExam('preboard2')">
+                            <span>Pre-Board 2 <span class="exam-tag">comming soon</span></span>
+                            
+                            <span>→</span>
+                        </div>
+                        <div class="exam-link" onclick="loadExam('preboard1')">
+                            <span>Pre-Board 1 <span class="exam-tag">New</span></span>
+                            
+                            <span>→</span>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="footer">
+                    © 2026 Sri Chaitanya PU & CBSE College, Marathahalli.
+                </div>
+            </div>
+
+            <!-- EXAM PAGE -->
+            <div id="exam-page" class="page">
+                <div class="container-header">
+                    <h2 id="exam-title">RESULTS</h2>
+                    <div class="college-type">PU & CBSE College (+2)</div>
+                </div>
+                <div class="content-wrapper">
+                    <button class="back-btn" onclick="showHomePage()">← Back to Exams</button>
+                    
+                    <div class="input-section">
+                        <div class="input-group">
+                            <input type="text" id="omr-input" class="omr-input" placeholder="Enter Admission Number" />
+                            <button class="search-btn" onclick="searchStudent()">Search</button>
+                        </div>
+                        <div id="error-msg" class="error-msg"></div>
+                    </div>
+                    
+                    <div id="result-container"></div>
+                </div>
+                <div class="footer">
+                    © 2026 Sri Chaitanya PU & CBSE College, Marathahalli.
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        let currentExamScript = null;
+
+        function loadExam(examFolder) {
+            if (currentExamScript) {
+                currentExamScript.remove();
+            }
+
+            currentExamScript = document.createElement('script');
+            currentExamScript.src = examFolder + '/' + examFolder + '.js';
+            currentExamScript.onload = function() {
+                if (typeof initExam === 'function') {
+                    initExam(examFolder);
+                }
+            };
+            currentExamScript.onerror = function() {
+                alert('Failed to load exam data. Please try again.');
+            };
+            document.body.appendChild(currentExamScript);
+        }
+
+        function showHomePage() {
+            document.getElementById('exam-page').classList.remove('active');
+            document.getElementById('home-page').classList.add('active');
+            document.getElementById('result-container').innerHTML = '';
+            document.getElementById('error-msg').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('omr-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && typeof searchStudent === 'function') {
+                    searchStudent();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
