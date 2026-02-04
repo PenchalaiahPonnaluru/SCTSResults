@@ -117,7 +117,7 @@ function displayResult(student) {
         <div class="result-card" id="marks-card">
             <!-- Print Header -->
             <div class="print-header">
-                <img src="../assets/schoollogo.jfif" alt="Logo" class="print-logo">
+                <img src="./assets/schoollogo.jfif" alt="Logo" class="print-logo">
                 <div class="print-school-name">Sri Chaitanya PU & CBSE College (+2)</div>
                 <div class="print-location">Marathahalli, Bengaluru</div>
                 <div class="print-exam-name">${examName}</div>
