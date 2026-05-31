@@ -1,0 +1,43 @@
+[
+  {
+    "ADM NO": "000000001",
+    "NAME OF THE STUDENT": "Sample Student",
+    "SEC": "A",
+    "MATHAMATICS": "70",
+    "PHYSICS": "60",
+    "CHEMISTRY": "5",
+    "totalMarks": 185,
+    "percentage": "61.67",
+    "campusRank": 3,
+    "MATHAMATICS_rank": 10,
+    "PHYSICS_rank": 3,
+    "CHEMISTRY_rank": 3
+  },
+  {
+    "ADM NO": "000000002",
+    "NAME OF THE STUDENT": "Second Student",
+    "SEC": "A",
+    "MATHAMATICS": "85",
+    "MATHAMATICS_rank": 2,
+    "PHYSICS": "78",
+    "PHYSICS_rank": 2,
+    "CHEMISTRY": "82",
+    "totalMarks": 245,
+    "percentage": "81.67",
+    "campusRank": 2
+  },
+  {
+    "ADM NO": "000000003",
+    "NAME OF THE STUDENT": "Third Student",
+    "SEC": "B",
+    "MATHAMATICS": "92",
+    "PHYSICS": "88",
+    "CHEMISTRY": "91",
+    "totalMarks": 271,
+    "percentage": "90.33",
+    "campusRank": 1,
+    "MATHAMATICS_rank": 1,
+    "PHYSICS_rank": 1,
+    "CHEMISTRY_rank": 1
+  }
+]
